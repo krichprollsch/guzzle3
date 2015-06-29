@@ -16,7 +16,7 @@ Guzzle is unit tested using `PHPUnit <http://www.phpunit.de/>`_.  Your web servi
 
 In order to unit test your client, a developer would need to copy phpunit.xml.dist to phpunit.xml and make any needed
 modifications.  As a best practice and security measure for you and your contributors, it is recommended to add an
-ignore statement to your SCM so that phpunit.xml is ignored.
+ignore statement to your SCM so that getServiceBuilderphpunit.xml is ignored.
 
 Bootstrapping
 ~~~~~~~~~~~~~
@@ -42,7 +42,7 @@ to provide the path to their configuration data.
     )));
 
 The above code registers a service builder that can be used throughout your unit tests.  You would then be able to
-retrieve an instantiated and configured Unfuddle client by calling ``$this->getServiceBuilder()->get('test.unfuddle)``.
+retrieve an instantiated and configured Unfuddle client by calling ``$this->getServiceBuilder()->get('test.unfuddle')``.
 The above code assumes that ``$_SERVER['CONFIG']`` contains the path to a file that stores service description
 configuration.
 
